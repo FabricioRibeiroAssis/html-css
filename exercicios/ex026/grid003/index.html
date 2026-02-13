@@ -7,21 +7,18 @@
     <style>
         div.container {
             border: 3px solid blue;
-            height: 250px;
             display: grid;
-            grid-template: repeat(3, auto) / repeat(3, auto); /* PRIMEIRO ROWS: LINHAS || SEGUNDO COLUMS: COLUNAS*/
-            gap: 5px;
+            grid-template-rows: 50px 30% 1fr; 
+            grid-template-columns: 100px 40% repeat(2, 1fr);
+            grid-auto-rows: 80px;
+            grid-auto-columns: 120px;
+            grid-auto-flow: row;
+            gap: 10px;
            
-            /* PLACE ITEMS | COLUMS 
-            
-            Primeiro vem o align - ( items ou content )
-            Depois vem o justify - ( items ou content )
-            
-            */
 
-            place-items: start center;
+            place-items: normal normal;
             
-            place-content: space-between end;
+            place-content: normal normal;
         }
 
         div.item {
@@ -40,6 +37,8 @@
         <div class="item">F</div>
         <div class="item">G</div>
         <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
     </div>
 </body>
 </html>
